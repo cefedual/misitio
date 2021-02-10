@@ -1,0 +1,86 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    font-size: 16px; /*1 rem es igual a 10px*/
+    font-family: 'Krub', sans-serif;
+}
+h1{
+    text-align: center;
+    color: #ffffff;
+    background-color:#031750;
+    font-size: 3.8rem; 
+    /*border-radius: 5cm;*/
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 span {
+    font-size: 2rem;
+    color: #ffffff;
+    font-family: 400;    
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.nav-bg{
+    background-color: #0EC3BB;
+    /*border-radius: 5cm;*/
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+@media (min-width: 768px) {
+    .menu{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.menu a {
+    color: blanchedalmond;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+.menu a:hover {
+    background-color: #FFC107;
+    color: black;       
+}
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+    padding: 15rem;
+    position: relative;
+    border-radius: 2cm;
+}
+.contenido-hero{
+    position: absolute;
+    /*background-color: rgba(0,0,0,0.4); ESTO ES PARA LA OPACIDAD DE LA FOTO*/
+    bottom: 0;
+    left: 0cm;
+    right: 0cm;
+    top: 0cm; /*puede ser width: 100%, y height:100%*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero h2,
+.contenido-hero p {
+    color: seashell;
+}
