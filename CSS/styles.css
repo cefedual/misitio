@@ -14,6 +14,8 @@ body{
 .contenedor{
     max-width: 120rem;
     margin: 0 auto;
+    color: #031750;
+    
 }
 .boton {
     background-color: #0EC3BB;
@@ -128,5 +130,74 @@ h1,h2,h3 {
     display: flex;
     font-size: 4rem;
 }
+/*Servicios*/
+@media (min-width: 768px){
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /*También se puede poner grid-template-columns: 33% 33% 33%; también puede ser: 1fr 1fr 1fr; (que son fracciones) también puede ser: repeat(3, 1fr) o 300px 300px 300px*/
+        grid-template-rows: 500px 200px;/*grid: 200px 200px / 300px 300px 300px; es lo mismo de arriba pero más corto*/
+        column-gap: 1.5rem;
+}
+.servicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 
+}
+.servicios p {
+    line-height: 2;
+    font-weight: normal;
+    text-align: justify;
+}
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: #031750;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+}
+/* Vamos con el formulario*/
+.formulario {
+    background-color: #031750;
+    width:min-content (60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.63);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.63);
+}
+.formulario fieldset {
+    border-style: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: whitesmoke;
+}
+.contenedor-campos {
 
+}
+.campo {
+    margin-bottom: 1rem;
+}
+.campo label {
+    color: whitesmoke;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.input-text {
+    width: 100%;
+    border:none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
