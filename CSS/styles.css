@@ -9,14 +9,14 @@ html{
 body{
     font-size: 16px; /*1 rem es igual a 10px*/
     font-family: 'Krub', sans-serif;
-    background-image: linear-gradient(to top, #DFE9F3 0%, whitesmoke 50%);
+    /*background-image: linear-gradient(to top, #DFE9F3 0%, whitesmoke 50%);*/
 }
 .contenedor{
     max-width: 120rem;
     margin: 0 auto;
     color: #031750;
-    
 }
+
 .boton {
     background-color: #0EC3BB;
     color: whitesmoke;
@@ -28,11 +28,16 @@ body{
     border-radius: 1rem;
     width: 90%;
     text-align: center;
+    border: none;
 }
-@media (min-width: 780px) {
+@media (min-width: 768px) {
     .boton {
         width: auto;
     }
+}
+.boton:hover {  
+    cursor: pointer;
+    background-color: #FFC107;
 }
 .sombra {
     -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.63);
@@ -64,6 +69,7 @@ h1,h2,h3 {
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+    padding: 1rem;
 }
 
 .titulo span {
@@ -72,15 +78,16 @@ h1,h2,h3 {
     font-family: 400;    
 }
 /* Menú de navegación principal*/
-.nav-bg{
+.nav-bg {
     background-color: #0EC3BB;
-    /*border-radius: 5cm;*/
+     /*border-radius: 5cm;*/
 }
 .menu{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
+    
 }
 @media (min-width: 768px) {
     .menu{
@@ -102,13 +109,13 @@ h1,h2,h3 {
 }
 .hero{
     background-image: url(../img/hero.jpg);
-    background-repeat: no-repeat;
+    background-repeat:inherit;
     background-size: cover;
     height: 50rem;
     padding: 15rem;
     position: relative;
-    border-radius: 2cm;
     margin-bottom: 2rem;
+    border:0;   
 }
 .contenido-hero{
     position: absolute;
@@ -137,29 +144,27 @@ h1,h2,h3 {
         grid-template-columns: repeat(3, 1fr); /*También se puede poner grid-template-columns: 33% 33% 33%; también puede ser: 1fr 1fr 1fr; (que son fracciones) también puede ser: repeat(3, 1fr) o 300px 300px 300px*/
         grid-template-rows: 500px 200px;/*grid: 200px 200px / 300px 300px 300px; es lo mismo de arriba pero más corto*/
         column-gap: 1.5rem;
-}
-.servicio {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-
-}
-.servicios p {
-    line-height: 2;
-    font-weight: normal;
-    text-align: justify;
-}
-.servicio .iconos {
-    height: 15rem;
-    width: 15rem;
-    background-color: #031750;
-    border-radius: 5rem;
-    display: flex;
-    justify-content: center;    
-    align-items: center;
-}
+    }
+    .servicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .servicios p {
+        line-height: 2;
+        font-weight: normal;
+        text-align: justify;
+    }
+    .servicio .iconos {
+        height: 15rem;
+        width: 15rem;
+        background-color: #031750;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+    }
 }
 /* Vamos con el formulario*/
 .formulario {
@@ -183,8 +188,17 @@ h1,h2,h3 {
     margin-bottom: 2rem;
     color: whitesmoke;
 }
-.contenedor-campos {
-
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2,1fr); /* o también 50% 50%; */
+        column-gap: 1rem;
+        grid-template-rows: auto auto 20rem;
+    }
+    .campo:nth-child(3), /*wow esto ubica el elementro entr las columnas*/
+    .campo:nth-child(4) {
+        grid-column: 1/3;
+    }
 }
 .campo {
     margin-bottom: 1rem;
@@ -195,9 +209,19 @@ h1,h2,h3 {
     margin-bottom: 0.5rem;
     display: block;
 }
+.campo textarea {
+    height: 20rem;
+}
 .input-text {
     width: 100%;
     border:none;
     padding: 1.5rem;
     border-radius: 0.5rem;
+}
+.enviar .boton {
+    width: 100%;
+
+}
+.footer {
+    text-align: center;
 }
