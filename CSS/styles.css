@@ -9,7 +9,7 @@ html{
 body{
     font-size: 16px; /*1 rem es igual a 10px*/
     font-family: 'Krub', sans-serif;
-    /*background-image: linear-gradient(to top, #DFE9F3 0%, whitesmoke 50%);*/
+    background-image: linear-gradient(to top, #DFE9F3 0%, whitesmoke 50%);
 }
 .contenedor{
     max-width: 120rem;
@@ -108,9 +108,11 @@ h1,h2,h3 {
     color: black;       
 }
 .hero{
-    background-image: url(../img/hero.jpg);
-    background-repeat:inherit;
+    max-width: 100%;
+    background-image: url(../img/hero.jpg);*/
+    background-repeat:no-repeat;
     background-size: cover;
+    ;
     height: 50rem;
     padding: 15rem;
     position: relative;
@@ -131,7 +133,8 @@ h1,h2,h3 {
 }
 .contenido-hero h2,
 .contenido-hero p {
-    color: seashell;
+    color: #FFC107;
+    font-size: 2rem;
 }
 .ubicacion {
     display: flex;
@@ -141,8 +144,8 @@ h1,h2,h3 {
 @media (min-width: 768px){
     .servicios {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /*También se puede poner grid-template-columns: 33% 33% 33%; también puede ser: 1fr 1fr 1fr; (que son fracciones) también puede ser: repeat(3, 1fr) o 300px 300px 300px*/
-        grid-template-rows: 500px 200px;/*grid: 200px 200px / 300px 300px 300px; es lo mismo de arriba pero más corto*/
+        grid-template-columns: repeat(2, 2fr); /*También se puede poner grid-template-columns: 33% 33% 33%; también puede ser: 1fr 1fr 1fr; (que son fracciones) también puede ser: repeat(3, 1fr) o 300px 300px 300px*/
+        grid-template-rows: 500px 500px;/*grid: 200px 200px / 300px 300px 300px; es lo mismo de arriba pero más corto*/
         column-gap: 1.5rem;
     }
     .servicio {
